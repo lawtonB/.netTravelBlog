@@ -10,5 +10,10 @@
         {
             <li>@Html.DisplayFor(x => location.LocationName)</li>
             <li>@Html.ActionLink("Experiences", "LocationToExperience", new { id = location.LocationId })</li>
+            @*<li>location.persons: @Html.DisplayFor(x => Model.Persons)</li>*@
+            @foreach (var person in location.Persons)
+            {   
+                <p>Met Here: @Html.DisplayFor(modelItem => person.PersonName)</p>
+            }
         }
     </ul>

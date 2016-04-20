@@ -1,0 +1,25 @@
+﻿@model TravelBlog.Models.Person
+<html>
+<head>
+    <title>Person - Create</title>
+</head>
+<body>
+    <h2>Create Person</h2>
+    <hr />
+    <h4>Add a new person</h4>
+    @using (Html.BeginForm())
+    {
+        @Html.LabelFor(model => model.PersonName)
+        @Html.TextBoxFor(model => model.PersonName)
+
+        @Html.LabelFor(model => model.LocationId)
+        @Html.TextBoxFor(model => model.LocationId)
+
+        @Html.LabelFor(model => model.ExperienceId)
+        @Html.TextBoxFor(model => model.ExperienceId)
+
+        <input type="submit" value="Add new person" />
+    }
+    <p>@Html.ActionLink("Back to persons", "Index")</p>
+</body>
+</html>

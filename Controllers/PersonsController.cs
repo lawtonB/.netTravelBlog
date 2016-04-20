@@ -29,5 +29,18 @@ namespace TravelBlog.Controllers
             var locationResult = db.Locations.Where(x => x.LocationId == id);
             return View(locationResult);
         }
+
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Create (Person person)
+        {
+            db.Persons.Add(person);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }
