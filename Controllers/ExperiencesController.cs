@@ -10,18 +10,20 @@ using TravelBlog.Models;
 
 namespace TravelBlog.Controllers
 {
-    public class LocationsController : Controller
+    public class ExperiencesController : Controller
     {
         private TravelBlogDbContext db = new TravelBlogDbContext();
         public IActionResult Index()
         {
-            return View(db.Locations.ToList());
+            return View(db.Experiences.ToList());
         }
 
-        public IActionResult LocationToExperience(int id)
+        public IActionResult ExperienceToLocation(int id)
         {
-            var LocationExperiences = db.Experiences.Where(x => x.LocationId == id).ToList();
-            return View(LocationExperiences);
+            var ExperienceLocations = db.Locations.Where(x => x.LocationId == id);
+            return View(ExperienceLocations);
         }
+
+
     }
 }

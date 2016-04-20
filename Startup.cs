@@ -41,7 +41,7 @@ namespace TravelBlog
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                    template: "{controller=Locations}/{action=Index}/{id?}");
             });
 
             app.UseIISPlatformHandler();
