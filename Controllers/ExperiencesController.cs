@@ -24,6 +24,19 @@ namespace TravelBlog.Controllers
             return View(ExperienceLocations);
         }
 
+        public IActionResult Create(int id)
+        {
+            ViewBag.thisLocationId = id;
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Create (Experience experience)
+        {
+            db.Experiences.Add(experience);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
 
     }
 }
