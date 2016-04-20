@@ -1,0 +1,17 @@
+﻿@model IEnumerable<TravelBlog.Models.Location>
+
+<html>
+<head>
+    <title>Locations</title>
+</head>
+<body>
+    <h2>Locations</h2>
+    <ul>
+        @foreach(var location in Model)
+        {
+            <li>@Html.DisplayFor(modelLocation => location.LocationName)</li>
+
+        }
+    </ul>
+</body>
+</html>
