@@ -13,10 +13,11 @@
         @Html.TextBoxFor(model => model.PersonName)
 
         @Html.LabelFor(model => model.LocationId)
-        @Html.TextBoxFor(model => model.LocationId)
+        @Html.DropDownList("LocationId")
+
 
         @Html.LabelFor(model => model.ExperienceId)
-        @Html.TextBoxFor(model => model.ExperienceId)
+        @Html.DropDownList("ExperienceId")
 
         <input type="submit" value="Add new person" />
     }
