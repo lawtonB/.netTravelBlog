@@ -1,0 +1,20 @@
+﻿@model TravelBlog.Models.Location
+<html>
+<head>
+    <title>Location - Create</title>
+</head>
+<body>
+    <h2>Create Location</h2>
+    <hr />
+    <h4>Add a new Location</h4>
+    @using (Html.BeginForm())
+    {
+        @Html.LabelFor(model => model.LocationName)
+        @Html.TextBoxFor(model => model.LocationName)
+
+        @*@Html.HiddenFor(model => model.LocationId, "LocationId")*@
+
+        <input type="submit" value="Add new Location" />
+    }
+</body>
+</html>

@@ -11,10 +11,11 @@
     {
         @Html.LabelFor(model => model.ExperienceName)
         @Html.TextBoxFor(model => model.ExperienceName)
-        @*@Html.LabelFor(model => model.LocationId)
-        @Html.TextBoxFor(model => model.LocationId)*@
+        @Html.LabelFor(model => model.LocationId)
 
-    @Html.HiddenFor(model => model.LocationId, @ViewBag.thisLocationId)
+        @Html.DropDownList("LocationId")
+
+    @*@Html.HiddenFor(model => model.LocationId, "LocationId")*@
 
         <input type="submit" value="Add new experience" />
     }
