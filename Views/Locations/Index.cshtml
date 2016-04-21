@@ -17,7 +17,7 @@
 
             }
             <p>@Html.ActionLink("Add new experience", "Create", "Experiences", new { id = location.LocationId })</p>
-                    <p>@Html.ActionLink("Delete", "Delete", new { id = location.LocationId })</p>
+                    @*<p>@Html.ActionLink("Delete", "Delete", new { id = location.LocationId })</p>*@
                  @using (Html.BeginForm("Delete", "Locations", new { id = location.LocationId }))
                 {
                 <input type="submit" value="Delete" />
@@ -39,7 +39,7 @@
 
             <br />*@
 
-         
+         <hr />
         }
 
     </ul>
