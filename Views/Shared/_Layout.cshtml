@@ -6,18 +6,20 @@
     <title>@ViewBag.Title</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="~/css/Styles.css" />
+    <script src="https://code.jquery.com/jquery-2.2.3.min.js"   integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="   crossorigin="anonymous"></script>
+    <script src="~/JavaScript.js"></script>
 
 </head>
 <body>
     <div class="container">
         @RenderBody()
+
+        <br />
+        @*@Html.ActionLink("Label", "Action", "Controller")*@
+
+        <button class="btn btn-success">@Html.ActionLink("People", "Index", "Persons")</button>
+        <button class="btn btn-info">@Html.ActionLink("Locations", "Index", "Locations")</button>
+        <button class="btn btn-warning">@Html.ActionLink("Experiences", "Index", "Experiences")</button>
     </div>
-    <br />
-    @*@Html.ActionLink("Label", "Action", "Controller")*@
-
-    <p>@Html.ActionLink("People", "Index", "Persons")</p>
-    <p>@Html.ActionLink("Locations", "Index", "Locations")</p>
-    <p>@Html.ActionLink("Experiences", "Index", "Experiences")</p>
-
 </body>
 </html>
