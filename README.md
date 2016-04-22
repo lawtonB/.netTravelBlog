@@ -1,0 +1,3 @@
+# .netTravelBlog
+
+This two day project for epicodus .net class demonstrates CRUD functionality, entity framework migrations, and multiple one to many relationships in the context of a travel blog. The user can add new locations, experiences, and people and link them together relationally using a sql database and visual studio. In order to run the project you must have Microsoft visual studio community version 2015 installed. First clone the repo and delete the project.JSON.lock file, then run dnu restore in windows powershell, then open the file in visual studio and run the project. This project was made by lawton and alex for epicodus on 4/21/16. Contact at lawton.a.browning@gmail.com     
